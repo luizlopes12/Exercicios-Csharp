@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Crud
 {
@@ -35,6 +37,18 @@ namespace Crud
         public void setCpf(string cpf)
         {
             cpf = this.cpf;
+        }
+        public void inserir()
+        {
+            string query = "insert into empregados(nomeEmpregado, sobreomeEmpregado, cpfEmpregado) values ('" +
+                this.nome + "', '" + this.sobrenome + "', '" + this.cpf + "')";
+            if(this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+                
         }
 
 

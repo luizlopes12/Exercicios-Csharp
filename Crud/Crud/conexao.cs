@@ -24,7 +24,7 @@ namespace Crud
             servidor = "127.0.0.1";
             database = "crud_csharp";
             usuario = "root";
-            senha = "";
+            senha = "1112";
 
             string conexaoString;
 
