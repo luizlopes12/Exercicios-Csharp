@@ -35,7 +35,7 @@ namespace Crud
                 gado.setCpf(cpf);
                 //chamando o metodo inserir
                 gado.inserir();
-                MessageBox.Show(cpf);
+                MessageBox.Show("Dados inseridos com sucesso!");
             }
             catch
             {

@@ -20,7 +20,7 @@ namespace Crud
         }
         public void setNome(string nome)
         {
-            nome = this.nome;
+            this.nome = nome;
         }
         public string getSobrenome()
         {
@@ -28,7 +28,7 @@ namespace Crud
         }
         public void setSobrenome(string sobrenome)
         {
-            sobrenome = this.sobrenome;
+            this.sobrenome = sobrenome;
         }
         public string getCpf()
         {
@@ -36,7 +36,7 @@ namespace Crud
         }
         public void setCpf(string cpf)
         {
-            cpf = this.cpf;
+            this.cpf = cpf;
         }
         public void inserir()
         {
