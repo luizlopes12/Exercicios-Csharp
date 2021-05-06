@@ -38,17 +38,17 @@ namespace Crud
         {
             cpf = this.cpf;
         }
-        public void inserir(string nome, string sobrenome, string cpf)
+        public void inserir()
         {
-            string query = "insert into empregados(nomeEmpregado, sobreomeEmpregado, cpfEmpregado) values ('" +
-                nome + "', '" + sobrenome + "', '" + cpf + "')";
-            if(this.abrirConexao() == true)
+            string query = "INSERT INTO empregados(nomeEmpregado,sobreomeEmpregado,cpfEmpregado)VALUES('" +
+                        this.nome + "' , '" + this.sobrenome + "' , '" + this.cpf + "')";
+            if (this.abrirConexao() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, conectar);
                 cmd.ExecuteNonQuery();
                 this.fecharConexao();
             }
-                
+
         }
 
 

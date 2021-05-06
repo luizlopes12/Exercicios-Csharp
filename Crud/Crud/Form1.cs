@@ -31,11 +31,11 @@ namespace Crud
             try
             {
                 gado.setNome(nome);
-                gado.setSobrenome(nome);
+                gado.setSobrenome(sobre);
                 gado.setCpf(cpf);
                 //chamando o metodo inserir
                 gado.inserir();
-                MessageBox.Show("Dados inseridos com sucesso!");
+                MessageBox.Show(cpf);
             }
             catch
             {
