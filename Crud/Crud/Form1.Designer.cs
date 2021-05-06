@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
+            this.btnInserir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,11 +87,24 @@
             this.mskCpf.Size = new System.Drawing.Size(82, 20);
             this.mskCpf.TabIndex = 6;
             // 
+            // btnInserir
+            // 
+            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.Location = new System.Drawing.Point(161, 201);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(174, 75);
+            this.btnInserir.TabIndex = 7;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 324);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.mskCpf);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
@@ -97,7 +112,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Crud Bolado";
+            this.Text = "Cadastro de Empregados";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +126,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.MaskedTextBox mskCpf;
+        private System.Windows.Forms.Button btnInserir;
     }
 }
 

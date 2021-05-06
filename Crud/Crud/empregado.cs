@@ -38,10 +38,10 @@ namespace Crud
         {
             cpf = this.cpf;
         }
-        public void inserir()
+        public void inserir(string nome, string sobrenome, string cpf)
         {
             string query = "insert into empregados(nomeEmpregado, sobreomeEmpregado, cpfEmpregado) values ('" +
-                this.nome + "', '" + this.sobrenome + "', '" + this.cpf + "')";
+                nome + "', '" + sobrenome + "', '" + cpf + "')";
             if(this.abrirConexao() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, conectar);
