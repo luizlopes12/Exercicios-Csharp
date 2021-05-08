@@ -50,5 +50,17 @@ namespace Crud
 
 
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            frmConsultar opa = new frmConsultar();
+            
+                opa.Show();
+            
+
+
+
+
+        }
     }
 }

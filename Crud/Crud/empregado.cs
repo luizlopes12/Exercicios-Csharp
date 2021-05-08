@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Crud
 {
@@ -50,7 +51,36 @@ namespace Crud
             }
 
         }
+        public DataTable consultar()
+        {
+            this.abrirConexao();
+            string query = "select * from empregados;";
+            MySqlCommand cmd =  new MySqlCommand(query, conectar);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 
+
+            this.fecharConexao();
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
+            return dt;
+            //mysqlcommand faz acesso e conecta na query no bd
+            //mysqladapter faz a requisição da query no bd
+            //datatable cria uma tabela com os dados
+            //da.Fill filtra os dados consultados
+
+
+
+
+
+
+
+
+
+
+        }
 
 
 
