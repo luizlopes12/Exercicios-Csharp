@@ -22,5 +22,33 @@ namespace WindowsFormsApplication2
             frmConsulta con = new frmConsulta();
             con.Show();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            fornecedor dor = new fornecedor();
+            string cnpj, nome, telefone, email;
+            cnpj = maskedTextBox1.Text;
+            nome = txtNome.Text;
+            telefone = mskTelefone.Text;
+            email = txtEmail.Text;
+            dor.setCNPJ(cnpj);
+            dor.setNome(nome);
+            dor.setTel(telefone);
+            dor.setEmail(email);
+
+            try
+            {
+                dor.inserir();
+                MessageBox.Show("Dados adicionados, Show!");
+            }
+            catch 
+            {
+
+                MessageBox.Show("Deu merda :(");
+            }
+
+
+
+        }
     }
 }

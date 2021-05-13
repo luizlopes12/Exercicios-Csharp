@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Data;
 namespace WindowsFormsApplication2
 {
-    class fornecedor
+    class fornecedor : conexao
     {
-        private double CNPJ;
+        private string CNPJ;
         private string nome;
-        private double tel;
+        private string tel;
         private string email;
 
 
 
-        public double getCNPJ()
+        public string getCNPJ()
         {
             return this.CNPJ;
         }
-        public void setCNPJ(double CNPJ)
+        public void setCNPJ(string CNPJ)
         {
             this.CNPJ = CNPJ;
         }
@@ -32,11 +33,11 @@ namespace WindowsFormsApplication2
         {
             this.nome = nome;
         }
-        public double getTel()
+        public string getTel()
         {
             return this.tel;
         }
-        public void setTel(double tel)
+        public void setTel(string tel)
         {
             this.tel = tel;
         }
@@ -51,11 +52,45 @@ namespace WindowsFormsApplication2
 
         public void inserir()
         {
-            string query = "insert into crud_fornecedores (CNPJ, Nome, Telefone, Email) values(
-                $'{CNPJ}'
-                
-                
-                "
+            string query = "insert into fornecedores(CNPJ, Nome, Telefone, Email)VALUES('" +
+                        this.CNPJ + "' , '" + this.nome + "' , '" + this.tel + "' , '" + this.email +"')";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+
+        }
+        public DataTable consultar()
+        {
+            this.abrirConexao();
+            string query = "select * from fornecedores;";
+            MySqlCommand cmd = new MySqlCommand(query, conectar);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+
+            this.fecharConexao();
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
+            return dt;
+            //mysqlcommand faz acesso e conecta na query no bd
+            //mysqladapter faz a requisição da query no bd
+            //datatable cria uma tabela com os dados
+            //da.Fill filtra os dados consultados
+
+
+
+
+
+
+
+
+
+
         }
 
 

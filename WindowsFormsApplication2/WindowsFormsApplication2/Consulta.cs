@@ -16,5 +16,11 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            fornecedor dor = new fornecedor();
+            dtgDados.DataSource = dor.consultar();
+        }
     }
 }
