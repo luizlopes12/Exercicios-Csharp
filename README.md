@@ -1,2 +1,2 @@
 # Exercicios-Csharp
- Exercicios Csharp do curso meu técnico
+ Exercicios C# do meu curso técnico
