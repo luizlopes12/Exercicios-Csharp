@@ -27,7 +27,7 @@ namespace WindowsFormsApplication2
         {
             fornecedor dor = new fornecedor();
             string cnpj, nome, telefone, email;
-            cnpj = maskedTextBox1.Text;
+            cnpj = txtCnpj.Text;
             nome = txtNome.Text;
             telefone = mskTelefone.Text;
             email = txtEmail.Text;
@@ -48,6 +48,16 @@ namespace WindowsFormsApplication2
             }
 
 
+
+        }
+
+        private void txtCnpj_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

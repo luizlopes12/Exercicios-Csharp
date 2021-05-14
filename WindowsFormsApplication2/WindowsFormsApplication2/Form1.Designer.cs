@@ -141,6 +141,7 @@
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(180, 20);
             this.txtCnpj.TabIndex = 0;
+            this.txtCnpj.TextChanged += new System.EventHandler(this.txtCnpj_TextChanged);
             // 
             // Form1
             // 
@@ -160,6 +161,7 @@
             this.Controls.Add(this.txtCnpj);
             this.Name = "Form1";
             this.Text = "Fornecedor";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
