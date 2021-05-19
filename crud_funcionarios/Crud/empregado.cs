@@ -70,20 +70,34 @@ namespace Crud
             //mysqladapter faz a requisição da query no bd
             //datatable cria uma tabela com os dados
             //da.Fill filtra os dados consultados
+        }
+        public DataTable consultaPorCpf()
+        {
+            this.abrirConexao();
+            string query = $"select * from empregados where cpfEmpregado = '{this.getCpf()}';";
 
+            MySqlCommand cmd = new MySqlCommand(query, conectar);
+            MySqlDataAdapter dta = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            this.fecharConexao();
+            dta.Fill(dt);
+            return dt;        
+        }
 
+        public void excluir()
+        {
+            string query = $"delete from empregados where cpfEmpregado = '{this.cpf}'; ";
 
-
-
-
-
+            if(this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
 
 
 
         }
-
-
-
 
 
 
