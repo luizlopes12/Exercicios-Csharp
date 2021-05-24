@@ -62,5 +62,17 @@ namespace Crud
 
 
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            frmExcluir excluir = new frmExcluir();
+            excluir.Show();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            frmAlterar alt = new frmAlterar();
+            alt.Show();
+        }
     }
 }

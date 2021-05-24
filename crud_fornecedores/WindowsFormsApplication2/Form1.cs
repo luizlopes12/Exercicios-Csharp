@@ -27,7 +27,7 @@ namespace WindowsFormsApplication2
         {
             fornecedor dor = new fornecedor();
             string cnpj, nome, telefone, email;
-            cnpj = txtCnpj.Text;
+            cnpj = mskCnpj.Text;
             nome = txtNome.Text;
             telefone = mskTelefone.Text;
             email = txtEmail.Text;
@@ -59,6 +59,23 @@ namespace WindowsFormsApplication2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmExcluir ex = new frmExcluir();
+            ex.Show();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            frmAlterar alt = new frmAlterar();
+            alt.Show();
         }
     }
 }

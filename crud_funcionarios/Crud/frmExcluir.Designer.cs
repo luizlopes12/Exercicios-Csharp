@@ -93,6 +93,7 @@
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir Empregado";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmExcluir
             // 

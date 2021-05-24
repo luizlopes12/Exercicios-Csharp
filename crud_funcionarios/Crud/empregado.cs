@@ -99,6 +99,17 @@ namespace Crud
 
         }
 
+        public void alterar()
+        {
+            string query = $"update empregados set nomeEmpregado = '{this.nome}', sobreomeempregado = '{this.sobrenome}' where cpfEmpregado = '{this.cpf}';";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+        }
+
 
 
 

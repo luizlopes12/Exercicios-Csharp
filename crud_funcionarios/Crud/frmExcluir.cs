@@ -34,5 +34,27 @@ namespace Crud
                 MessageBox.Show("Não foi possivel consultar os dados.");
             }
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cpf;
+                cpf = mskConsultaCpf.Text;
+                gado.setCpf(cpf);
+                gado.excluir();
+                MessageBox.Show("Dados excluidos.");
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possivel excluir os dados.");
+            }
+
+
+
+
+
+
+        }
     }
 }

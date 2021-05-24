@@ -39,7 +39,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mskCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -135,19 +137,46 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // txtCnpj
+            // button1
             // 
-            this.txtCnpj.Location = new System.Drawing.Point(155, 49);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(180, 20);
-            this.txtCnpj.TabIndex = 0;
-            this.txtCnpj.TextChanged += new System.EventHandler(this.txtCnpj_TextChanged);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(180, 322);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mskCnpj
+            // 
+            this.mskCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.mskCnpj.Location = new System.Drawing.Point(155, 49);
+            this.mskCnpj.Mask = "99.999.999/9999-99";
+            this.mskCnpj.Name = "mskCnpj";
+            this.mskCnpj.Size = new System.Drawing.Size(180, 23);
+            this.mskCnpj.TabIndex = 12;
+            this.mskCnpj.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(12, 322);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(133, 38);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 372);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.mskCnpj);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label5);
@@ -158,7 +187,6 @@
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCnpj);
             this.Name = "Form1";
             this.Text = "Fornecedor";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -178,7 +206,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.TextBox txtCnpj;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox mskCnpj;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }
 

@@ -74,25 +74,48 @@ namespace WindowsFormsApplication2
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-
             return dt;
             //mysqlcommand faz acesso e conecta na query no bd
             //mysqladapter faz a requisição da query no bd
             //datatable cria uma tabela com os dados
             //da.Fill filtra os dados consultados
-
-
-
-
-
-
-
-
-
-
         }
 
+        public DataTable consultarCnpj()
+        {
+            this.abrirConexao();
+            string query = $"select * from fornecedores where CNPJ = '{this.CNPJ}';";
+            MySqlCommand cmd = new MySqlCommand(query, conectar);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+
+            this.fecharConexao();
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public void excluir(){
+            string query = $"delete from fornecedores where CNPJ = '{this.CNPJ}'";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+    }
+
+}
+
+                public void alterar()
+        {
+            string query = $"update fornecedor set nome = '{this.nome}', email = '{this.email}', telefone = '{this.tel}' where cnpj = '{this.CNPJ}';";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+        }
 
     }
 }
