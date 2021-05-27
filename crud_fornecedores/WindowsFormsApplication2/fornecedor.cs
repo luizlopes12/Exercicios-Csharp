@@ -106,9 +106,8 @@ namespace WindowsFormsApplication2
 
 }
 
-                public void alterar()
-        {
-            string query = $"update fornecedor set nome = '{this.nome}', email = '{this.email}', telefone = '{this.tel}' where cnpj = '{this.CNPJ}';";
+            public void alterar(){
+            string query = $"update fornecedores set nome = '{this.nome}', email = '{this.email}', telefone = '{this.tel}' where cnpj = '{this.CNPJ}';";
             if (this.abrirConexao() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, conectar);

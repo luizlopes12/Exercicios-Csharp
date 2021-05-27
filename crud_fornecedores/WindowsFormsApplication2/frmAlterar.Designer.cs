@@ -40,6 +40,8 @@
             this.txtTel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlterar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 345);
+            this.label3.Location = new System.Drawing.Point(51, 318);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 9;
@@ -104,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 377);
+            this.label4.Location = new System.Drawing.Point(54, 350);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
@@ -112,29 +114,30 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(114, 342);
+            this.txtNome.Location = new System.Drawing.Point(114, 315);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(157, 20);
             this.txtNome.TabIndex = 12;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(114, 374);
+            this.txtEmail.Location = new System.Drawing.Point(114, 347);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(157, 20);
             this.txtEmail.TabIndex = 13;
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(114, 407);
+            this.txtTel.Location = new System.Drawing.Point(114, 380);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(157, 20);
             this.txtTel.TabIndex = 15;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 410);
+            this.label6.Location = new System.Drawing.Point(37, 383);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 14;
@@ -142,7 +145,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(335, 340);
+            this.button1.Location = new System.Drawing.Point(335, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 34);
             this.button1.TabIndex = 16;
@@ -150,11 +153,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 418);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "CNPJ:";
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Enabled = false;
+            this.txtCnpj.Location = new System.Drawing.Point(114, 415);
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(157, 20);
+            this.txtCnpj.TabIndex = 18;
+            // 
             // frmAlterar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 472);
+            this.Controls.Add(this.txtCnpj);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.label6);
@@ -190,5 +212,7 @@
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCnpj;
     }
 }

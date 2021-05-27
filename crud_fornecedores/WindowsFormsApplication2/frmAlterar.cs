@@ -36,9 +36,11 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                txtNome.Text = dgvAlterar.CurrentRow.Cells["Nome"].Value.ToString();
-                txtEmail.Text = dgvAlterar.CurrentRow.Cells["Email"].Value.ToString();
-                txtTel.Text = dgvAlterar.CurrentRow.Cells["Telefone"].Value.ToString();
+                txtCnpj.Text = dgvAlterar.CurrentRow.Cells[1].Value.ToString();
+                txtNome.Text = dgvAlterar.CurrentRow.Cells[2].Value.ToString();
+                txtTel.Text = dgvAlterar.CurrentRow.Cells[3].Value.ToString();
+                txtEmail.Text = dgvAlterar.CurrentRow.Cells[4].Value.ToString();
+
             }
             catch
             {
@@ -55,10 +57,12 @@ namespace WindowsFormsApplication2
         private void button1_Click(object sender, EventArgs e)
         {
             fornecedor dor = new fornecedor();
-            string nome, tel, email;
+            string nome, tel, email, cnpj;
             nome = txtNome.Text;
             email = txtEmail.Text;
             tel = txtTel.Text;
+            cnpj = txtCnpj.Text;
+            dor.setCNPJ(cnpj);
             dor.setNome(nome);
             dor.setEmail(email);
             dor.setTel(tel);
@@ -67,13 +71,17 @@ namespace WindowsFormsApplication2
                 dor.alterar();
                 MessageBox.Show("Dados alterados com sucesso");
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Não foi possivel alterar os dados");
 
             }
 
 
+        }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
