@@ -31,19 +31,27 @@ namespace crud_clientes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cliente cli = new cliente();
-            string rg, nome, end, tel;
-            rg = mskRg.Text;
-            nome = txtNome.Text;
-            end = txtEnd.Text;
-            tel = mskTel.Text;
-            cli.setRg(rg);
-            cli.setNome(nome);
-            cli.setEnd(end);
-            cli.setTel(tel);
+            try
+            {
+                cliente cli = new cliente();
+                string rg, nome, end, tel;
+                rg = mskRg.Text;
+                nome = txtNome.Text;
+                end = txtEnd.Text;
+                tel = mskTel.Text;
+                cli.setRg(rg);
+                cli.setNome(nome);
+                cli.setEnd(end);
+                cli.setTel(tel);
 
                 cli.inserir();
                 MessageBox.Show("Cliente cadastrado com sucesso!");
+            }
+            catch 
+            {
+
+                MessageBox.Show("Não foi possivel cadastrar os dados");
+            }
 
 
 
@@ -52,6 +60,30 @@ namespace crud_clientes
 
 
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmConsultar cons = new frmConsultar();
+            cons.Show();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            frmExcluir ex = new frmExcluir();
+            ex.Show();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            frmAlterar alt = new frmAlterar();
+            alt.Show();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

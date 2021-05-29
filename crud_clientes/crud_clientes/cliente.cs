@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
+using System.Data;
 namespace crud_clientes
 {
     class cliente:conexao
@@ -68,13 +68,52 @@ namespace crud_clientes
 
 
         }
+        public DataTable consultar()
+        {
+            this.abrirConexao();
+            string query = "select * from clientes;";
+            MySqlCommand cmd = new MySqlCommand(query, conectar);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            this.fecharConexao();
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            return dt;
+        }
+        public DataTable consultarPorRg()
+        {
+            this.abrirConexao();
+            string query = $"select * from clientes where rg = '{this.getRg()}'";
+            MySqlCommand cmd = new MySqlCommand(query, conectar);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            this.fecharConexao();
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            return dt;
+        }
 
 
+        public void excluir()
+        {
+            string query = $"delete from clientes where rg = '{this.rg}';";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+        }
 
 
-
-
-
+        public void alterar()
+        {
+            string query = $"update clientes set nome = '{this.nome}', endereco = '{this.end}', telefone = '{this.tel}' where rg = '{this.rg}'";
+            if (this.abrirConexao() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                cmd.ExecuteNonQuery();
+                this.fecharConexao();
+            }
+        }
 
 
 
