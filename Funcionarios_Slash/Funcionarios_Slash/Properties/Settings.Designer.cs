@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace frmPrincipal.Properties
+namespace Funcionarios_Slash.Properties
 {
 
 

@@ -8,18 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace frmPrincipal
+namespace Funcionarios_Slash
 {
-    public partial class frmSlash : Form
+    public partial class Form1 : Form
     {
-        public frmSlash()
+        public Form1()
         {
             InitializeComponent();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            
+            pgbCarregar.Increment(10);
+            if (pgbCarregar.Value == 100)
+            {
+                timer.Stop();
+                frmInicio frm = new frmInicio();
+                frm.Show();
+                this.Hide();
+            }
         }
     }
 }

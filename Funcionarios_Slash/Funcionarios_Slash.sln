@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frmPrincipal", "frmPrincipal\frmPrincipal.csproj", "{36CEBC67-29FC-4C7A-9F1E-65DF12E7467A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionarios_Slash", "Funcionarios_Slash\Funcionarios_Slash.csproj", "{A27AA806-B407-4C0E-B673-7D617DB4524E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{36CEBC67-29FC-4C7A-9F1E-65DF12E7467A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36CEBC67-29FC-4C7A-9F1E-65DF12E7467A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36CEBC67-29FC-4C7A-9F1E-65DF12E7467A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36CEBC67-29FC-4C7A-9F1E-65DF12E7467A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27AA806-B407-4C0E-B673-7D617DB4524E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27AA806-B407-4C0E-B673-7D617DB4524E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27AA806-B407-4C0E-B673-7D617DB4524E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27AA806-B407-4C0E-B673-7D617DB4524E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

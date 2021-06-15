@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("frmPrincipal")]
+[assembly: AssemblyTitle("Funcionarios_Slash")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("frmPrincipal")]
+[assembly: AssemblyProduct("Funcionarios_Slash")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("36cebc67-29fc-4c7a-9f1e-65df12e7467a")]
+[assembly: Guid("a27aa806-b407-4c0e-b673-7d617db4524e")]
 
 // Version information for an assembly consists of the following four values:
 //
