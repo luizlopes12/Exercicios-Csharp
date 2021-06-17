@@ -22,5 +22,17 @@ namespace Funcionarios_Slash
             frmCadastrar f = new frmCadastrar();
             f.Show();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultar c = new frmConsultar();
+            c.Show();
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExcluir ex = new frmExcluir();
+            ex.Show();
+        }
     }
 }

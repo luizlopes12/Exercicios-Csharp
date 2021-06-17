@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Crud
+namespace Funcionarios_Slash
 {
     public partial class frmConsultar : Form
     {
@@ -19,24 +19,8 @@ namespace Crud
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            empregado gado = new empregado();
-            dgvConsultar.DataSource = gado.consultar();
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-        private void dgvConsultar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            funcionario f = new funcionario();
+            dgvConsultar.DataSource = f.consultar();
         }
     }
 }
