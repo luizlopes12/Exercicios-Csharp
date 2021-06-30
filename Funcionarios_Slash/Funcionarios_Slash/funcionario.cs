@@ -83,15 +83,17 @@ namespace Funcionarios_Slash
         }
         public DataTable consultaPorRg()
         {
-            this.abrirConexao();
-            string query = $"select * from funcionarios where rg = '{this.getRg()}';";
 
-            MySqlCommand cmd = new MySqlCommand(query, conectar);
-            MySqlDataAdapter dta = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            this.fecharConexao();
-            dta.Fill(dt);
-            return dt;
+                this.abrirConexao();
+                string query = $"select * from funcionarios where rg = '{this.getRg()}';";
+                MySqlCommand cmd = new MySqlCommand(query, conectar);
+                MySqlDataAdapter dta = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                this.fecharConexao();
+                dta.Fill(dt);
+                return dt;
+
+
         }
 
         public void excluir()

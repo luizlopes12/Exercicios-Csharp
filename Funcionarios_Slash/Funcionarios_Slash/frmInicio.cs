@@ -34,5 +34,11 @@ namespace Funcionarios_Slash
             frmExcluir ex = new frmExcluir();
             ex.Show();
         }
+
+        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlterar alt = new frmAlterar();
+            alt.Show();
+        }
     }
 }

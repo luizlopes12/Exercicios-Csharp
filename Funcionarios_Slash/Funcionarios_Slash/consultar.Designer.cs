@@ -38,27 +38,27 @@
             // dgvConsultar
             // 
             this.dgvConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultar.Location = new System.Drawing.Point(14, 164);
+            this.dgvConsultar.Location = new System.Drawing.Point(12, 154);
             this.dgvConsultar.Name = "dgvConsultar";
-            this.dgvConsultar.Size = new System.Drawing.Size(583, 177);
+            this.dgvConsultar.Size = new System.Drawing.Size(523, 266);
             this.dgvConsultar.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.Location = new System.Drawing.Point(166, 39);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.5F);
+            this.label1.Location = new System.Drawing.Point(158, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 20);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Consultar dados dos Empregados";
+            this.label1.Text = "Todos os Funcionários";
             // 
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(236, 92);
+            this.btnConsultar.Location = new System.Drawing.Point(218, 92);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(121, 56);
             this.btnConsultar.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 378);
+            this.ClientSize = new System.Drawing.Size(547, 432);
             this.Controls.Add(this.dgvConsultar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConsultar);

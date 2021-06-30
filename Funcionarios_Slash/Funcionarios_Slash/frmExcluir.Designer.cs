@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExcluir));
             this.btnExcluir = new System.Windows.Forms.Button();
             this.dgvEmpregadoExcluir = new System.Windows.Forms.DataGridView();
             this.btnConsultarCpf = new System.Windows.Forms.Button();
@@ -39,11 +40,13 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.Location = new System.Drawing.Point(309, 337);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(139, 44);
             this.btnExcluir.TabIndex = 11;
-            this.btnExcluir.Text = "Excluir Empregado";
+            this.btnExcluir.Text = "Excluir Dados";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
@@ -57,10 +60,11 @@
             // 
             // btnConsultarCpf
             // 
+            this.btnConsultarCpf.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarCpf.Image")));
             this.btnConsultarCpf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarCpf.Location = new System.Drawing.Point(309, 70);
+            this.btnConsultarCpf.Location = new System.Drawing.Point(309, 78);
             this.btnConsultarCpf.Name = "btnConsultarCpf";
-            this.btnConsultarCpf.Size = new System.Drawing.Size(139, 35);
+            this.btnConsultarCpf.Size = new System.Drawing.Size(139, 43);
             this.btnConsultarCpf.TabIndex = 9;
             this.btnConsultarCpf.Text = "Consultar CPF";
             this.btnConsultarCpf.UseVisualStyleBackColor = true;
@@ -69,7 +73,7 @@
             // mskConsultaRg
             // 
             this.mskConsultaRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.mskConsultaRg.Location = new System.Drawing.Point(173, 75);
+            this.mskConsultaRg.Location = new System.Drawing.Point(173, 87);
             this.mskConsultaRg.Mask = "00.000.000-0";
             this.mskConsultaRg.Name = "mskConsultaRg";
             this.mskConsultaRg.Size = new System.Drawing.Size(114, 23);
@@ -80,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(7, 76);
+            this.label2.Location = new System.Drawing.Point(7, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 7;
@@ -90,11 +94,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, -1);
+            this.label1.Location = new System.Drawing.Point(46, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 29);
+            this.label1.Size = new System.Drawing.Size(370, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Excluir dados dos empregados";
+            this.label1.Text = "Excluir dados dos funcionarios";
             // 
             // frmExcluir
             // 

@@ -23,8 +23,8 @@ namespace Funcionarios_Slash
             if (pgbCarregar.Value == 100)
             {
                 timer.Stop();
-                frmInicio frm = new frmInicio();
-                frm.Show();
+                frmLogin l = new frmLogin();
+                l.Show();
                 this.Hide();
             }
         }
