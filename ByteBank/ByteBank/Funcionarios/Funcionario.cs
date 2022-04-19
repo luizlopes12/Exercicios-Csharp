@@ -8,10 +8,15 @@ namespace ByteBank
 {
     public class Funcionario
     {
+        public static int totalDeFuncionarios { get; private set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public double Salario { get; set; }
-
+            
+        public Funcionario()
+        {
+            totalDeFuncionarios++;
+        }
         public virtual double getBonificacao()
         {
 

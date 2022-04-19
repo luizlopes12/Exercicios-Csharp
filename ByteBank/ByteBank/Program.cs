@@ -24,6 +24,7 @@ namespace ByteBank
             roberta.getBonificacao();
 
             Console.WriteLine($"Total de bonificações: {gerenciador.getTotalBonificacao()}");
+            Console.WriteLine($"Total de Funcionarios: { Funcionario.totalDeFuncionarios}");
         }
 
     }
